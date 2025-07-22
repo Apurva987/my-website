@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hospital</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      
+    }
+    .nav-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(1.02);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    nav {
+      background-color: rgba(167, 224, 12, 0.9);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+    }
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #a90977ff;
+    }
+
+    nav a.active {
+      font-weight: bold;
+      border-bottom: 2px solid #fff;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 160px;
+      top: 100%;
+      left: 0;
+      z-index: 1;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-size: 14px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ab6161ff;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .appointment-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.appointment-btn {
+  background-color: #5912ccff;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+    .appointment-btn:hover {
+      background-color: #19c84eff;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-left">
+    <h1>SHRADDHA HOSPITAL</h1>
+  </div>
+    <div class="nav-center">
+    <div class="nav-links">
+      <a href="#home"><img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Home" class="nav-icon"> Home</a>
+
+<div class="dropdown">
+  <a href="#aboutus"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="About" class="nav-icon"> About Us</a>
+  <div class="dropdown-content">
+    <a href="leadership.html">Leadership</a>
+    <a href="journey.html">Our Journey</a>
+    <a href="awards.html">Awards</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <a href="#Specialists"><img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" alt="Specialists" class="nav-icon"> Specialists</a>
+  <div class="dropdown-content">
+    <a href="neurologists.html">Neurologists</a>
+    <a href="pediatrics.html">Pediatrics</a>
+    <a href="cardiologists.html">Cardiologists</a>
+    <a href="dermatologists.html">Dermatologists</a>
+  </div>
+</div>
+
+<a href="contact.html"><img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Contact" class="nav-icon"> Contact</a>
+  </div>
+  </div>
+
+<div class="appointment-wrapper">
+  <a href="appoiement.html" class="appointment-btn"><img src="https://cdn-icons-png.flaticon.com/512/1055/1055646.png" alt="Book" class="nav-icon"> Book Appointment</a>
+  </div>
+
+  </nav>
+
+  <script>
+    const images = [
+      'https://static.vecteezy.com/system/resources/previews/000/219/529/original/medical-background-vector.jpg',
+      'https://www.healio.com/~/media/slack-news/fm_im/items-formerly-in-primary-care-collections-folder/primary-care/meeting-news/200332_shm_meeting_og.jpg',
+      'https://wallpaperaccess.com/full/624111.jpg',
+      'https://wallpaperaccess.com/full/422429.jpg'
+    ];
+
+    let index = 0;
+
+    function changeBackground() {
+      document.body.style.backgroundImage = `url('${images[index]}')`;
+      index = (index + 1) % images.length;
+    }
+
+  
+    changeBackground();
+
+    
+    setInterval(changeBackground, 5000);
+  </script>
+
+</body>
+</html>
